@@ -6,7 +6,7 @@ Pour éfféctuer la conversion, il faut commencer par comprendre la notation pon
 
 ====>7.1<====
 
-##IPv6
+## IPv6
 
 Une adresse IPv6 est longue de 128 Bits et est représentée comme une suite d'enesembles de 4 signes hexadécimaux appelés segments. Pour réduire cette adresse on peut : 
 
@@ -28,7 +28,7 @@ Ainsi, un hote peut obtenir une adresse IPv6 suivant 3 techniques :
 
 * **SLAAC** La méthode sans intervation du DHCP où l'hote génère lui même son adresse IPv6 avec les informations reçus par le routeur soit le prefix du réseau, l'adresse de la passerelle, l'adresse du DNS et le nom de domaine.
 * **SLAAC & DHCP** Dans ce mode les informations de création d'adresse sont fournies par le routeur ainsi que la passerelle mais le DNS est offert par le DHCP
-* **DHCP** Dna ce mode, le routeur fournis l'adresse de passerelle et le DHCP fournis l'adresse a utiliser; l'hote ne doit donc pas genèrer son adresse IP
+* **DHCP** Dans ce mode, le routeur fournis l'adresse de passerelle et le DHCP fournis l'adresse a utiliser; l'hote ne doit donc pas genèrer son adresse IP
 
 L'ID d'interface génèrée dans le mode 1 et 2 le sont suivant l'une des deux métodes suivantes :
 
@@ -45,6 +45,10 @@ Il existe deux types de multidiffusion permettant de distribuer des paquets a un
 
 * **Multidiffusion a adresses attribués** On donne une adresse de multidiffusion a un groupe d'hotes. Ces adresses ont le prefix `FF00::/8`. Il en existe deux principaux. `FF02::1` permet d'envoyer un message a tout les hotes du réseau et `FF02::2` permet d'envoyer a tout les routeurs du réseau
 * **Mutidiffusion a noeuds sollicités** couplé a l'adresse ethernet de diffusion, cette technique permet d'envoyer a tout les hotes munis d'une adresse IPv6 et ce sont ces hotes qui décident de la prendre en compte ou non
+
+### Types adresses IPv6 
+![type ipv6](./img/type-ipv6.PNG)
+
 
 ## ICMP
 
