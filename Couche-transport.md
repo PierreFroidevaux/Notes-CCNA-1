@@ -12,11 +12,16 @@ Il existe deux types de protocoles utilisés sur la couche transport et présent
 
 ## Ports
 
+### Liste ports connus
+
+![Ports connus](./img/liste-ports.PNG)
+
+
 La gestion des ports permettent a plusieurs applications de communiquer sur le même système. Pour se faire on attribue un port a chaque application pour cmmuniquer. Un port **source** et un port **destination**. Avec l'adresse IP et le port, on a toutes les informations pour se faire communiquer deux applications précises sur deux systèmes distants. Il existe différents types de numerots de ports :
 
 * **Ports réservés (0-1023)** permettant a des applications standards de communquer
 * **Port enregistrés (1024-49151)** enregistrablme aupres de l'IANA par des entreprises permettant de normaliser les ports utilisés
-* **Ports privés ou dynamiques (49152-65535)** ports attribués dynamiquement par un hote por permettre un conexion dans les deux sens
+* **Ports privés ou dynamiques (49152-65535)** ports attribués dynamiquement par un hote puor permettre une connexion dans les deux sens
 
 > Quick tip : La commande `netstat` permet d'afficher les ports utilisés sur une machine
 
@@ -38,7 +43,7 @@ Pour arriver a cela, le protocol inclue les en-têtes suivants :
 * **Somme de contrôle (16 bits)** utilisé pour controler les érreurs du segment
 * **Urgent (16 bits)** indique si un paquet est urgent
 
-Pour éfféctuer une connexion, 3 etapes sont requises.
+Pour effectuer une connexion, 3 etapes sont requises.
 
 1. Le client demande une connexion au serveur (requète SYN)
 2. Le srveur accuse récéption et demande uyne connexion vers le client (requète SYN et ACK)
@@ -47,8 +52,8 @@ Pour éfféctuer une connexion, 3 etapes sont requises.
 Pour fermer un connexion, on procède comme suit :
 
 1. Le client envoie une requète de fin (requète FIN)
-2. Le serveur accuse récéption et envoie un segment de fin (Requète ACK et FIN)
-3. Le client accuse récéption du segment fin (Requète ACK)
+2. Le serveur accuse réception et envoie un segment de fin (Requète ACK et FIN)
+3. Le client accuse réception du segment fin (Requète ACK)
 
 Chaque connexion TCP se déroule en 3 etapes :
 
