@@ -52,16 +52,16 @@ Il existe deux types de multidiffusion permettant de distribuer des paquets a un
 
 ## ICMP
 
-les paquets ICMP sont des paquets permettant d'informer et de gèrer les érreurs sur le réseau. Il en exite beaucoup et nous en etudierons ici 4.
+les paquets ICMP sont des paquets permettant d'informer et de gèrer les erreurs sur le réseau. Il en existe beaucoup et nous en etudierons ici 4.
 
 Le paquet **Host confirmation** permet de demander une confirmation de présence a l'hote. On envie alors un paquet `echo` a un hote qui répond par un autre paquet `echo`.
 
 Le paquet **Destination  or service unreachable** est utilisé pour avertire que le paquet n'a pus atteindre la cible due a un certaine raison qui est decris suivant un code :
 
 * **0** Réseau inaccessible
-* **1** Hote inaccessible
-* **2** Protocol inacessible
-* **3** Port anacessible
+* **1** Hôte inaccessible
+* **2** Protocole inaccessible
+* **3** Port inaccessible
 
 Le paquet de **dépassement du delai** est envoyé si le champ TTL ou nombre de tronçons est dépassé et donc le paquet ne peut etre transmis.
 
